@@ -11,6 +11,7 @@ import Foundation
 open class TestData : NSObject {
     
     public var dataName: String?
+    public var basketNumber: Int = 0
     
     public func setDataName(from string:String) {
         dataName = string.replacingOccurrences(of: " ", with: "_")

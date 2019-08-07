@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C364232B22FACEA7000F0015 /* TestCaseLauncher.h in Headers */ = {isa = PBXBuildFile; fileRef = C364232922FACEA7000F0015 /* TestCaseLauncher.h */; };
+		C364232C22FACEA7000F0015 /* TestCaseLauncher.m in Sources */ = {isa = PBXBuildFile; fileRef = C364232A22FACEA7000F0015 /* TestCaseLauncher.m */; };
 		C3ADCC3420D4161B00979276 /* DataDrivenTestsFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3ADCC2A20D4161B00979276 /* DataDrivenTestsFramework.framework */; };
 		C3ADCC3920D4161B00979276 /* DataDrivenTestsFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ADCC3820D4161B00979276 /* DataDrivenTestsFrameworkTests.swift */; };
 		C3ADCC3B20D4161B00979276 /* DataDrivenTestsFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ADCC2D20D4161B00979276 /* DataDrivenTestsFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -33,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C364232922FACEA7000F0015 /* TestCaseLauncher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCaseLauncher.h; sourceTree = "<group>"; };
+		C364232A22FACEA7000F0015 /* TestCaseLauncher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCaseLauncher.m; sourceTree = "<group>"; };
 		C3ADCC2A20D4161B00979276 /* DataDrivenTestsFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataDrivenTestsFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3ADCC2D20D4161B00979276 /* DataDrivenTestsFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataDrivenTestsFramework.h; sourceTree = "<group>"; };
 		C3ADCC2E20D4161B00979276 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 				C3ADCC4820D416FC00979276 /* DataTypes */,
 				C3ADCC4D20D416FC00979276 /* TestCaseWithData.h */,
 				C3ADCC4220D416FC00979276 /* TestCaseWithData.m */,
+				C364232922FACEA7000F0015 /* TestCaseLauncher.h */,
+				C364232A22FACEA7000F0015 /* TestCaseLauncher.m */,
 				C3ADCC4C20D416FC00979276 /* TestCaseWithDatasource.swift */,
 				C3ADCC2D20D4161B00979276 /* DataDrivenTestsFramework.h */,
 				C3ADCC2E20D4161B00979276 /* Info.plist */,
@@ -139,6 +145,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C364232B22FACEA7000F0015 /* TestCaseLauncher.h in Headers */,
 				C3ADCC5720D416FC00979276 /* TestCaseWithData.h in Headers */,
 				C3ADCC3B20D4161B00979276 /* DataDrivenTestsFramework.h in Headers */,
 			);
@@ -246,6 +253,7 @@
 				C3ADCC5320D416FC00979276 /* TestDataDictionary.swift in Sources */,
 				C3ADCC4F20D416FC00979276 /* TestDataSourceWithFiles.swift in Sources */,
 				C3ADCC5220D416FC00979276 /* TestDatasourceJson.swift in Sources */,
+				C364232C22FACEA7000F0015 /* TestCaseLauncher.m in Sources */,
 				C3ADCC5120D416FC00979276 /* TestDataSource.swift in Sources */,
 				C3ADCC5620D416FC00979276 /* TestCaseWithDatasource.swift in Sources */,
 				C3ADCC5420D416FC00979276 /* TestData.swift in Sources */,

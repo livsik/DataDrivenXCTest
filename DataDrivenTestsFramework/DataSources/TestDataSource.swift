@@ -13,4 +13,16 @@ open class TestDataSource : NSObject {
         return []
     }
     
+    public func randomizeParallelBaskets(maxBaskets: Int) {
+        guard maxBaskets > 1 else {
+            return
+        }
+        let hasCustomBackets = dataCases().first { $0.basketNumber != 0 }
+        guard hasCustomBackets == nil else {
+            return
+        }
+        for (index, oneCase) in dataCases().enumerated() {
+            oneCase.basketNumber = index % maxBaskets + 1
+        }
+    }
 }

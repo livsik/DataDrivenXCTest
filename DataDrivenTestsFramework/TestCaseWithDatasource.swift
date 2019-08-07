@@ -17,12 +17,18 @@ open class TestCaseWithDatasource: TestCaseWithData {
             return nil
         }
     }
-    override open class func dataCases(forTest test:String) -> [TestData]? {
+    
+    override open class func basket(forTest data:TestData) -> Int {
+        return data.basketNumber
+    }
+    
+    override open class func dataCases(forTest test: String) -> [TestData]? {
         return nil
     }
     
-    override open class func dataCases(forTest test:String, dataSource:TestDataSource?) -> [TestData]? {
+    override open class func dataCases(forTest test: String, dataSource: TestDataSource?) -> [TestData]? {
         if let dataSource = dataSource {
+            dataSource.randomizeParallelBaskets(maxBaskets: self.maxParallelThreads())
             return dataSource.dataCases()
         }
         else {

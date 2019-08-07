@@ -9,7 +9,7 @@ import XCTest
 import DataDrivenTestsFramework
 
 class DataDrivenTestsFrameworkTests: TestCaseWithDatasource {
-   
+    
     class TestDataCustom: TestData {
         let customStr1:String
         let customStr2:String
@@ -22,25 +22,32 @@ class DataDrivenTestsFrameworkTests: TestCaseWithDatasource {
         }
     }
     
+    override class func maxParallelThreads() -> Int {
+        return 4
+    }
+    
     override open class func loadDS() -> TestDataSource {
         let ds = TestDataSourceMutable()
         ds.add(case: TestDataCustom(customStr1: "AAA", customStr2: "BBB"))
         ds.add(case: TestDataCustom(customStr1: "CCC", customStr2: "DDD"))
+        ds.add(case: TestDataCustom(customStr1: "EEE", customStr2: "FFF"))
+        ds.add(case: TestDataCustom(customStr1: "GGG", customStr2: "HHH"))
+        
         return ds
         
     }
     
-    override class func dataCases(forTest test:String, dataSource:TestDataSource?) -> [TestData]? {
-        if let dataSource = dataSource, test == "testExample" {
-            return dataSource.dataCases()
-        }
-        else {
-            return dataCases(forTest: test)
-        }
-    }
-    
+//    override class func dataCases(forTest test:String, dataSource: TestDataSource?) -> [TestData]? {
+//        if let dataSource = dataSource, test == "testExample" {
+//            return dataSource.dataCases()
+//        }
+//        else {
+//            return dataCases(forTest: test)
+//        }
+//    }
+//
     override class func namePatching() -> TestNamePatching {
-        return TestNamePatchingClassName
+        return TestNamePatchingFunctionName
     }
     
     override func setUp() {
@@ -54,15 +61,15 @@ class DataDrivenTestsFrameworkTests: TestCaseWithDatasource {
     }
     
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        Thread.sleep(forTimeInterval: 5)
+        print("bla  \(self) bla \(String(describing: self.currentTestData))")
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+//    func testPerformanceExample() {
+//        // This is an example of a performance test case.
+//        self.measure {
+//            // Put the code you want to measure the time of here.
+//        }
+//    }
     
 }

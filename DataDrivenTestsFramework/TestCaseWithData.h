@@ -31,9 +31,11 @@ typedef enum : NSUInteger {
 + (nullable NSArray <__kindof TestData *> *)dataCasesForTest:(NSString *)name dataSource:(nullable TestDataSource *)dataSource;
 
 + (nullable NSString *)nameForTestData:(TestData *)data;
++ (NSInteger)basketForTestData:(TestData *)data;
 + (TestDataSource *)loadDS;
 + (NSString *)suiteName; //== to class name by default
 + (TestNamePatching)namePatching;
++ (NSInteger)maxParallelThreads;
 
 @end
 
