@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C362ABDE24728AE500B9B2B6 /* TestSuite.h in Headers */ = {isa = PBXBuildFile; fileRef = C362ABDC24728AE500B9B2B6 /* TestSuite.h */; };
+		C362ABDF24728AE500B9B2B6 /* TestSuite.m in Sources */ = {isa = PBXBuildFile; fileRef = C362ABDD24728AE500B9B2B6 /* TestSuite.m */; };
 		C364232B22FACEA7000F0015 /* TestCaseLauncher.h in Headers */ = {isa = PBXBuildFile; fileRef = C364232922FACEA7000F0015 /* TestCaseLauncher.h */; };
 		C364232C22FACEA7000F0015 /* TestCaseLauncher.m in Sources */ = {isa = PBXBuildFile; fileRef = C364232A22FACEA7000F0015 /* TestCaseLauncher.m */; };
 		C3ADCC3420D4161B00979276 /* DataDrivenTestsFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3ADCC2A20D4161B00979276 /* DataDrivenTestsFramework.framework */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C362ABDC24728AE500B9B2B6 /* TestSuite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestSuite.h; sourceTree = "<group>"; };
+		C362ABDD24728AE500B9B2B6 /* TestSuite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestSuite.m; sourceTree = "<group>"; };
 		C364232922FACEA7000F0015 /* TestCaseLauncher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCaseLauncher.h; sourceTree = "<group>"; };
 		C364232A22FACEA7000F0015 /* TestCaseLauncher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCaseLauncher.m; sourceTree = "<group>"; };
 		C3ADCC2A20D4161B00979276 /* DataDrivenTestsFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataDrivenTestsFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +103,8 @@
 				C3ADCC4820D416FC00979276 /* DataTypes */,
 				C3ADCC4D20D416FC00979276 /* TestCaseWithData.h */,
 				C3ADCC4220D416FC00979276 /* TestCaseWithData.m */,
+				C362ABDC24728AE500B9B2B6 /* TestSuite.h */,
+				C362ABDD24728AE500B9B2B6 /* TestSuite.m */,
 				C364232922FACEA7000F0015 /* TestCaseLauncher.h */,
 				C364232A22FACEA7000F0015 /* TestCaseLauncher.m */,
 				C3ADCC4C20D416FC00979276 /* TestCaseWithDatasource.swift */,
@@ -148,6 +154,7 @@
 				C364232B22FACEA7000F0015 /* TestCaseLauncher.h in Headers */,
 				C3ADCC5720D416FC00979276 /* TestCaseWithData.h in Headers */,
 				C3ADCC3B20D4161B00979276 /* DataDrivenTestsFramework.h in Headers */,
+				C362ABDE24728AE500B9B2B6 /* TestSuite.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +258,7 @@
 				C3ADCC5520D416FC00979276 /* TestDataString.swift in Sources */,
 				C3ADCC5020D416FC00979276 /* TestDataSourceMutable.swift in Sources */,
 				C3ADCC5320D416FC00979276 /* TestDataDictionary.swift in Sources */,
+				C362ABDF24728AE500B9B2B6 /* TestSuite.m in Sources */,
 				C3ADCC4F20D416FC00979276 /* TestDataSourceWithFiles.swift in Sources */,
 				C3ADCC5220D416FC00979276 /* TestDatasourceJson.swift in Sources */,
 				C364232C22FACEA7000F0015 /* TestCaseLauncher.m in Sources */,

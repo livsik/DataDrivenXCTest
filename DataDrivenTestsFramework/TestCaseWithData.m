@@ -8,6 +8,7 @@
 
 #import "TestCaseWithData.h"
 #include <objc/runtime.h>
+#import "TestSuite.h"
 
 @interface TestCaseWithData ()
 
@@ -31,7 +32,7 @@
     
     TestDataSource *ds = [self loadDS];
     
-    XCTestSuite *suite = [[XCTestSuite alloc] initWithName:[self suiteName]];
+    XCTestSuite *suite = [[TestSuite alloc] initWithName:[self suiteName]];
     
     NSArray <NSInvocation *> *allTestInvoations = [self testInvocations];
     NSMutableArray <TestCaseWithData *> *allTestCases = [NSMutableArray new];
