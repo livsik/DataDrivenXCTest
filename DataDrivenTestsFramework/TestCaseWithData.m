@@ -17,7 +17,9 @@
 @implementation TestCaseWithData
 
 + (NSString *)suiteName {
-    return NSStringFromClass(self);
+    // Trim Swift module
+    NSArray<NSString *> *names = [NSStringFromClass(self) componentsSeparatedByString:@"."];
+    return names.lastObject;
 }
 
 + (XCTestSuite *)defaultTestSuite {
