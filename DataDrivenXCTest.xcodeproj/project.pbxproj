@@ -24,6 +24,20 @@
 		C3ADCC5520D416FC00979276 /* TestDataString.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ADCC4B20D416FC00979276 /* TestDataString.swift */; };
 		C3ADCC5620D416FC00979276 /* TestCaseWithDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ADCC4C20D416FC00979276 /* TestCaseWithDatasource.swift */; };
 		C3ADCC5720D416FC00979276 /* TestCaseWithData.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ADCC4D20D416FC00979276 /* TestCaseWithData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F202635B25C4414700B87D80 /* TestCaseLauncher.m in Sources */ = {isa = PBXBuildFile; fileRef = C364232A22FACEA7000F0015 /* TestCaseLauncher.m */; };
+		F202636025C4414C00B87D80 /* TestSuite.m in Sources */ = {isa = PBXBuildFile; fileRef = C362ABDD24728AE500B9B2B6 /* TestSuite.m */; };
+		F202636125C4414F00B87D80 /* TestCaseWithData.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ADCC4220D416FC00979276 /* TestCaseWithData.m */; };
+		F202636225C4415600B87D80 /* TestCaseWithDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ADCC4C20D416FC00979276 /* TestCaseWithDatasource.swift */; };
+		F202636625C4415D00B87D80 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ADCC4A20D416FC00979276 /* TestData.swift */; };
+		F202636725C4415D00B87D80 /* TestDataString.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ADCC4B20D416FC00979276 /* TestDataString.swift */; };
+		F202636825C4415D00B87D80 /* TestDataDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ADCC4920D416FC00979276 /* TestDataDictionary.swift */; };
+		F202636925C4416300B87D80 /* TestDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ADCC4620D416FC00979276 /* TestDataSource.swift */; };
+		F202636A25C4416300B87D80 /* TestDataSourceWithFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ADCC4420D416FC00979276 /* TestDataSourceWithFiles.swift */; };
+		F202636B25C4416300B87D80 /* TestDatasourceJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ADCC4720D416FC00979276 /* TestDatasourceJson.swift */; };
+		F202636C25C4416300B87D80 /* TestDataSourceMutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ADCC4520D416FC00979276 /* TestDataSourceMutable.swift */; };
+		F202637025C441C400B87D80 /* TestCaseWithData.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ADCC4D20D416FC00979276 /* TestCaseWithData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F202637925C44A5000B87D80 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F202637825C44A5000B87D80 /* XCTest.framework */; };
+		F26A88D725D133F200ACC2EB /* DataDrivenTestsFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ADCC2D20D4161B00979276 /* DataDrivenTestsFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +71,8 @@
 		C3ADCC4B20D416FC00979276 /* TestDataString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestDataString.swift; sourceTree = "<group>"; };
 		C3ADCC4C20D416FC00979276 /* TestCaseWithDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCaseWithDatasource.swift; sourceTree = "<group>"; };
 		C3ADCC4D20D416FC00979276 /* TestCaseWithData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCaseWithData.h; sourceTree = "<group>"; };
+		F202637825C44A5000B87D80 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F2F08E7A2567D7A0005E2942 /* DataDrivenTestsFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataDrivenTestsFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +91,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F2F08E772567D7A0005E2942 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F202637925C44A5000B87D80 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -84,6 +108,7 @@
 				C3ADCC2C20D4161B00979276 /* DataDrivenTestsFramework */,
 				C3ADCC3720D4161B00979276 /* DataDrivenTestsFrameworkTests */,
 				C3ADCC2B20D4161B00979276 /* Products */,
+				F202637725C44A5000B87D80 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +117,7 @@
 			children = (
 				C3ADCC2A20D4161B00979276 /* DataDrivenTestsFramework.framework */,
 				C3ADCC3320D4161B00979276 /* DataDrivenTestsFrameworkTests.xctest */,
+				F2F08E7A2567D7A0005E2942 /* DataDrivenTestsFramework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,6 +170,14 @@
 			path = DataTypes;
 			sourceTree = "<group>";
 		};
+		F202637725C44A5000B87D80 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F202637825C44A5000B87D80 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -155,6 +189,15 @@
 				C3ADCC5720D416FC00979276 /* TestCaseWithData.h in Headers */,
 				C3ADCC3B20D4161B00979276 /* DataDrivenTestsFramework.h in Headers */,
 				C362ABDE24728AE500B9B2B6 /* TestSuite.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2F08E752567D7A0005E2942 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F26A88D725D133F200ACC2EB /* DataDrivenTestsFramework.h in Headers */,
+				F202637025C441C400B87D80 /* TestCaseWithData.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +240,24 @@
 			productReference = C3ADCC3320D4161B00979276 /* DataDrivenTestsFrameworkTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F2F08E792567D7A0005E2942 /* DataDrivenTestsFramework Mac OS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2F08E812567D7A0005E2942 /* Build configuration list for PBXNativeTarget "DataDrivenTestsFramework Mac OS" */;
+			buildPhases = (
+				F2F08E752567D7A0005E2942 /* Headers */,
+				F2F08E762567D7A0005E2942 /* Sources */,
+				F2F08E772567D7A0005E2942 /* Frameworks */,
+				F2F08E782567D7A0005E2942 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DataDrivenTestsFramework Mac OS";
+			productName = "DataDrivenTestsFramework Mac OS";
+			productReference = F2F08E7A2567D7A0005E2942 /* DataDrivenTestsFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -212,6 +273,9 @@
 					};
 					C3ADCC3220D4161B00979276 = {
 						CreatedOnToolsVersion = 10.0;
+					};
+					F2F08E792567D7A0005E2942 = {
+						CreatedOnToolsVersion = 12.1;
 					};
 				};
 			};
@@ -229,6 +293,7 @@
 			targets = (
 				C3ADCC2920D4161B00979276 /* DataDrivenTestsFramework */,
 				C3ADCC3220D4161B00979276 /* DataDrivenTestsFrameworkTests */,
+				F2F08E792567D7A0005E2942 /* DataDrivenTestsFramework Mac OS */,
 			);
 		};
 /* End PBXProject section */
@@ -242,6 +307,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C3ADCC3120D4161B00979276 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2F08E782567D7A0005E2942 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -277,6 +349,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F2F08E762567D7A0005E2942 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F202636025C4414C00B87D80 /* TestSuite.m in Sources */,
+				F202635B25C4414700B87D80 /* TestCaseLauncher.m in Sources */,
+				F202636B25C4416300B87D80 /* TestDatasourceJson.swift in Sources */,
+				F202636925C4416300B87D80 /* TestDataSource.swift in Sources */,
+				F202636A25C4416300B87D80 /* TestDataSourceWithFiles.swift in Sources */,
+				F202636825C4415D00B87D80 /* TestDataDictionary.swift in Sources */,
+				F202636725C4415D00B87D80 /* TestDataString.swift in Sources */,
+				F202636225C4415600B87D80 /* TestCaseWithDatasource.swift in Sources */,
+				F202636C25C4416300B87D80 /* TestDataSourceMutable.swift in Sources */,
+				F202636625C4415D00B87D80 /* TestData.swift in Sources */,
+				F202636125C4414F00B87D80 /* TestCaseWithData.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -291,12 +381,18 @@
 		C3ADCC2320D414B800979276 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				INFOPLIST_FILE = DataDrivenTestsFramework/Info.plist;
+				PRODUCT_MODULE_NAME = DataDrivenTestsFramework;
+				PRODUCT_NAME = DataDrivenTestsFramework;
 			};
 			name = Debug;
 		};
 		C3ADCC2420D414B800979276 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				INFOPLIST_FILE = DataDrivenTestsFramework/Info.plist;
+				PRODUCT_MODULE_NAME = DataDrivenTestsFramework;
+				PRODUCT_NAME = DataDrivenTestsFramework;
 			};
 			name = Release;
 		};
@@ -358,7 +454,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = DataDrivenTestsFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -369,7 +464,6 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.livsik.DataDrivenTestsFramework;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -433,7 +527,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = DataDrivenTestsFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -443,7 +536,6 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.livsik.DataDrivenTestsFramework;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -594,6 +686,157 @@
 			};
 			name = Release;
 		};
+		F2F08E7F2567D7A0005E2942 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.readdle.DataDrivenTestsFramework-Mac-OS";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F2F08E802567D7A0005E2942 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.readdle.DataDrivenTestsFramework-Mac-OS";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -620,6 +863,15 @@
 			buildConfigurations = (
 				C3ADCC4020D4161B00979276 /* Debug */,
 				C3ADCC4120D4161B00979276 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2F08E812567D7A0005E2942 /* Build configuration list for PBXNativeTarget "DataDrivenTestsFramework Mac OS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2F08E7F2567D7A0005E2942 /* Debug */,
+				F2F08E802567D7A0005E2942 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
