@@ -27,18 +27,23 @@
     if (threads > 1 && [self basketNumber] == 0) {
         return nil;
     }
+    
+    NSString *suiteName = [self suiteName];
+    if ([self shouldSkipTestWithName:suiteName]) {
+        return nil;
+    }
+    
     TestNamePatching pathcingStyle = [self namePatching];
     if (pathcingStyle == TestNamePatchingDefault) {
         pathcingStyle = TestNamePatchingFunctionName;
     }
     
-    TestDataSource *ds = [self loadDS];
-    
-    XCTestSuite *suite = [[TestSuite alloc] initWithName:[self suiteName]];
+    XCTestSuite *suite = [[TestSuite alloc] initWithName:suiteName];
     
     NSArray <NSInvocation *> *allTestInvoations = [self testInvocations];
     NSMutableArray <TestCaseWithData *> *allTestCases = [NSMutableArray new];
     
+    TestDataSource *ds = [self loadDS];
     for (NSInvocation *invocation in allTestInvoations) {
         NSArray<TestCaseWithData *> *testCases = [self casesForInvocation:invocation dataSource:ds namePathcing:pathcingStyle burrentBasket:[self basketNumber]];
         
@@ -90,8 +95,11 @@
 }
 
 + (NSArray <TestCaseWithData *> *)casesForInvocation:(NSInvocation *)invocation dataSource:(TestDataSource *)dataSource namePathcing:(TestNamePatching)pStyle burrentBasket:(NSInteger)basket {
-    
     NSString *methodName = NSStringFromSelector(invocation.selector);
+    if ([self shouldSkipTestWithName:methodName]) {
+        return @[];
+    }
+    
     NSArray <TestData *> *dataCases = [self dataCasesForTest:methodName dataSource:dataSource];
     if (dataCases != nil) {
         NSMutableArray <TestCaseWithData *> *result = [NSMutableArray new];
@@ -118,6 +126,10 @@
 
 + (NSArray <TestData *> *)dataCasesForTest:(NSString *)name dataSource:(TestDataSource *)dataSource {
     return nil;
+}
+
++ (BOOL)shouldSkipTestWithName:(NSString *)testName {
+    return NO;
 }
 
 + (TestDataSource *)loadDS {
