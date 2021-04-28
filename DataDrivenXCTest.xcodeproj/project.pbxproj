@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -38,6 +38,8 @@
 		F202637025C441C400B87D80 /* TestCaseWithData.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ADCC4D20D416FC00979276 /* TestCaseWithData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F202637925C44A5000B87D80 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F202637825C44A5000B87D80 /* XCTest.framework */; };
 		F26A88D725D133F200ACC2EB /* DataDrivenTestsFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ADCC2D20D4161B00979276 /* DataDrivenTestsFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2EA755A26398FA7000D5216 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2EA755926398FA6000D5216 /* XCTest.framework */; platformFilter = ios; };
+		F2EA755B26398FA7000D5216 /* XCTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F2EA755926398FA6000D5216 /* XCTest.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,20 @@
 			remoteInfo = DataDrivenTestsFramework;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F2EA755C26398FA7000D5216 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F2EA755B26398FA7000D5216 /* XCTest.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C362ABDC24728AE500B9B2B6 /* TestSuite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestSuite.h; sourceTree = "<group>"; };
@@ -72,6 +88,7 @@
 		C3ADCC4C20D416FC00979276 /* TestCaseWithDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCaseWithDatasource.swift; sourceTree = "<group>"; };
 		C3ADCC4D20D416FC00979276 /* TestCaseWithData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCaseWithData.h; sourceTree = "<group>"; };
 		F202637825C44A5000B87D80 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F2EA755926398FA6000D5216 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F2F08E7A2567D7A0005E2942 /* DataDrivenTestsFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataDrivenTestsFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -80,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2EA755A26398FA7000D5216 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +191,7 @@
 		F202637725C44A5000B87D80 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F2EA755926398FA6000D5216 /* XCTest.framework */,
 				F202637825C44A5000B87D80 /* XCTest.framework */,
 			);
 			name = Frameworks;
@@ -212,6 +231,7 @@
 				C3ADCC2620D4161B00979276 /* Sources */,
 				C3ADCC2720D4161B00979276 /* Frameworks */,
 				C3ADCC2820D4161B00979276 /* Resources */,
+				F2EA755C26398FA7000D5216 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -437,6 +457,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(PLATFORM_DIR)/Developer/Library/Frameworks\"";
@@ -516,6 +537,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(PLATFORM_DIR)/Developer/Library/Frameworks\"";
