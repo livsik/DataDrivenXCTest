@@ -29,7 +29,7 @@ typedef enum : NSUInteger {
 
 //by default will retual all cases if datasource is loaded
 + (nullable NSArray <__kindof TestData *> *)dataCasesForTest:(NSString *)name dataSource:(nullable TestDataSource *)dataSource;
-+ (BOOL)shouldSkipTestWithName:(NSString *)testName;
++ (BOOL)shouldSkipTestWithName:(NSString *)testName dataCase:(nullable TestData *)testData;
 
 + (nullable NSString *)nameForTestData:(TestData *)data;
 + (NSInteger)basketForTestData:(TestData *)data;

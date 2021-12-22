@@ -29,7 +29,7 @@
     }
     
     NSString *suiteName = [self suiteName];
-    if ([self shouldSkipTestWithName:suiteName]) {
+    if ([self shouldSkipTestWithName:suiteName dataCase:nil]) {
         return nil;
     }
     
@@ -45,14 +45,12 @@
     
     TestDataSource *ds = [self loadDS];
     for (NSInvocation *invocation in allTestInvoations) {
-        NSArray<TestCaseWithData *> *testCases = [self casesForInvocation:invocation dataSource:ds namePathcing:pathcingStyle burrentBasket:[self basketNumber]];
+        NSArray<TestCaseWithData *> *testCases = [self casesForInvocation:invocation dataSource:ds namePathcing:pathcingStyle currentBasket:[self basketNumber]];
         
         for (TestCaseWithData *test in testCases) {
             [allTestCases addObject:test];
         }
     }
-    
-    
     
     [allTestCases sortUsingComparator:^NSComparisonResult(TestCaseWithData *obj1, TestCaseWithData *obj2) {
         return [NSStringFromClass(obj1.class) compare:NSStringFromClass(obj2.class)];
@@ -94,20 +92,21 @@
     return newCase;
 }
 
-+ (NSArray <TestCaseWithData *> *)casesForInvocation:(NSInvocation *)invocation dataSource:(TestDataSource *)dataSource namePathcing:(TestNamePatching)pStyle burrentBasket:(NSInteger)basket {
++ (NSArray <TestCaseWithData *> *)casesForInvocation:(NSInvocation *)invocation dataSource:(TestDataSource *)dataSource namePathcing:(TestNamePatching)pStyle currentBasket:(NSInteger)basket {
     NSString *methodName = NSStringFromSelector(invocation.selector);
-    if ([self shouldSkipTestWithName:methodName]) {
-        return @[];
-    }
-    
     NSArray <TestData *> *dataCases = [self dataCasesForTest:methodName dataSource:dataSource];
     if (dataCases != nil) {
         NSMutableArray <TestCaseWithData *> *result = [NSMutableArray new];
         for (TestData *oneCase in dataCases) {
-            NSInteger b = [self basketForTestData:oneCase];
+            const NSInteger b = [self basketForTestData:oneCase];
             if (basket > 0 && b > 0 && b != basket) {
                 continue;
             }
+
+            if ([self shouldSkipTestWithName:methodName dataCase:oneCase]) {
+                continue;
+            }
+
             TestCaseWithData *newCase = [self caseWithData:oneCase invocation:invocation namePathcing:pStyle];
             [result addObject:newCase];
         }
@@ -115,6 +114,10 @@
         return result;
     }
     else {
+        if ([self shouldSkipTestWithName:methodName dataCase:nil]) {
+            return @[];
+        }
+        
         TestCaseWithData *newCase = [self caseWithData:nil invocation:invocation namePathcing:TestNamePatchingNoPathcing];
         return @[newCase];
     }
@@ -128,7 +131,7 @@
     return nil;
 }
 
-+ (BOOL)shouldSkipTestWithName:(NSString *)testName {
++ (BOOL)shouldSkipTestWithName:(NSString *)testName dataCase:(nullable TestData *)testData {
     return NO;
 }
 
