@@ -7,10 +7,11 @@
 
 import Foundation
 
+
 open class TestDataSourceMutable: TestDataSource {
-    var casesInner = [TestData]()
+    private var casesInner = [TestData]()
     
-    convenience public init(cases:[TestData]) {
+    convenience public init(cases: [TestData]) {
         self.init()
         casesInner = cases
     }
@@ -19,7 +20,11 @@ open class TestDataSourceMutable: TestDataSource {
          return casesInner
     }
     
-    public func add(case dataCase:TestData) {
+    public func add(case dataCase: TestData) {
         casesInner.append(dataCase)
+    }
+    
+    public func add(cases dataCases: [TestData]) {
+        casesInner.append(contentsOf: dataCases)
     }
 }
