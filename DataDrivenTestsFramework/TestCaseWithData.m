@@ -94,6 +94,31 @@
     return newCase;
 }
 
+- (NSMutableDictionary<NSString *, TestData *> *)currentTestDataStorage {
+    static NSMutableDictionary<NSString *, TestData *> *storage;
+    static dispatch_once_t once;
+    dispatch_once(&once, ^{
+        storage = [[NSMutableDictionary alloc] init];
+    });
+    return storage;
+}
+
+- (void)setCurrentTestData:(TestData *)currentTestData {
+    NSMutableDictionary<NSString *, TestData *> *storage = [self currentTestDataStorage];
+    
+    @synchronized (storage) {
+        storage[self.description] = currentTestData;
+    }
+}
+
+- (TestData *)currentTestData {
+    NSMutableDictionary<NSString *, TestData *> *storage = [self currentTestDataStorage];
+    
+    @synchronized (storage) {
+        return storage[self.description];
+    }
+}
+
 + (NSArray <TestCaseWithData *> *)casesForInvocation:(NSInvocation *)invocation dataSource:(TestDataSource *)dataSource namePathcing:(TestNamePatching)pStyle burrentBasket:(NSInteger)basket {
     NSString *methodName = NSStringFromSelector(invocation.selector);
     if ([self shouldSkipTestWithName:methodName]) {
